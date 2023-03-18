@@ -1,0 +1,21 @@
+{% extends "trabajo/base.html" %}
+{% block subtitulo %}Info del Profesor{% endblock subtitulo %}
+
+{% block main %}
+<h4>Detalle del Profesor</h4>
+<span>
+  <b>Nombre:</b> {{profesor.nombre}}<br>
+  <b>Apellido:</b> {{profesor.apellido}}<br>
+
+</span>
+<br>
+{% if profesor.descripcion %}
+<span>
+  <b>Descripcion:</b> {{profesor.descripcion}}
+</span>
+{% endif %}
+<br><br>
+
+<a href="{% url 'listar_profesores' %}">Volver a la lista</a>
+
+{% block main %}

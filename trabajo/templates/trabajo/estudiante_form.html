@@ -1,0 +1,12 @@
+{% extends "trabajo/base.html" %}
+
+{% block subtitulo %}Editar Estudiante{% endblock subtitulo %}
+
+{% block main %}
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Enviar" />
+</form>
+{% block main %}
